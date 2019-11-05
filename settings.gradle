@@ -1,0 +1,7 @@
+include 'api-mvc'
+include 'core'
+include 'doc-swagger2'
+include 'config-source-parser-yml'
+include 'util-uri-parser'
+include 'auto-rest'
+
