@@ -1,5 +1,8 @@
 package com.springframework.web.restservices.domain.contract.uri;
 
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
 public class EmbedObject {
-    private String path;
+    private final String path;
 }

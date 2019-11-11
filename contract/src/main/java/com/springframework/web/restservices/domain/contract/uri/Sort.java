@@ -11,4 +11,8 @@ public class Sort {
     public static Sort asc(String name) {
         return of(name, SortOrder.ASC);
     }
+
+    public static Sort desc(String name) {
+        return of(name, SortOrder.DESC);
+    }
 }

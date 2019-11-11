@@ -1,9 +1,6 @@
 package com.springframework.web.restservices.domain.contract.parser;
 
-import com.springframework.web.restservices.domain.contract.uri.EmbedObject;
-import com.springframework.web.restservices.domain.contract.uri.MediaType;
-import com.springframework.web.restservices.domain.contract.uri.Page;
-import com.springframework.web.restservices.domain.contract.uri.SortOrder;
+import com.springframework.web.restservices.domain.contract.uri.*;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -13,14 +10,15 @@ public interface UriParser {
 
 
     Double getVersion();
+    List<InnerObject> getInnerList();
+
+    Language getLanguage();
 
     Map<String, String> getFilters();
 
-    LinkedList<SortOrder> getSortList();
+    LinkedList<Sort> getSortList();
 
-    default String getSearch() {
-        throw new RuntimeException();
-    }
+    String getSearch() ;
 
     List<EmbedObject> getEmbedList();
 

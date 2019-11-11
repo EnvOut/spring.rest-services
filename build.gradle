@@ -5,7 +5,7 @@ plugins {
 }
 
 ext {
-    springBootVersion= '2.2.0.RELEASE'
+    springBootVersion = '2.2.0.RELEASE'
 }
 
 repositories {
@@ -31,9 +31,16 @@ subprojects { subproject ->
 
     dependencies {
         compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: "$springBootVersion"
-        testImplementation('org.springframework.boot:spring-boot-starter-test') {
+//        testImplementation('org.springframework.boot:spring-boot-starter-test') {
+////            exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+//        }
+
+        testImplementation("org.springframework.boot:spring-boot-starter-test:$springBootVersion") {
             exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
         }
+
+//        testImplementation('org.junit.jupiter:junit-jupiter:5.5.2')
+        testImplementation("org.assertj:assertj-core:3.11.1")
     }
 
     test {

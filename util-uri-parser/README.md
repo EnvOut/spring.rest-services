@@ -1,9 +1,24 @@
 ### What is done
+- [X] Version
+- [X] Sorting
+- [X] Paging
+    * [X] Size
+    * [X] Page
+- [X] Search (q=some)
+- [X] Filter parameters
+- [X] Media type from the URI
+- [X] Inner object (/users/1/rules)
+- [X] Embed (embed=some1,some2.subsome)
+- [X] Language
 
 ### In progress
-- [ ] Version
+- [X] Version
 - [ ] Filtering
-- [ ] Sorting
+- [X] Sorting
+- [ ] Paging
+    * [X] Size
+    * [X] Page
+    * [ ] Link header
 - [ ] Auto loading related
 - [ ] Media type
 
@@ -14,7 +29,7 @@
 
 ### Rest
 - [ ] Aliases support
-- [ ] Support header `X-HTTP-Method-Override`
+- [ ] Support method overriding `X-HTTP-Method-Override`
 - [ ] Rate limiting support
 	* `X-Rate-Limit-Limit` - The number of allowed requests in the current period
 	* `X-Rate-Limit-Remaining` - The number of remaining requests in the current period
