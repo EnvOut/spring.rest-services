@@ -5,4 +5,5 @@ include 'config-source-parser-yml'
 include 'util-uri-parser'
 include 'auto-rest'
 include 'contract'
+include 'datasource-hibernate'
 

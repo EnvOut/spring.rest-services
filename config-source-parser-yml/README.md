@@ -1,0 +1,39 @@
+- [ ] path:
+    - [ ] name?: some name 1
+    - [ ] request:
+        - [ ] parameters:
+            - [ ] uuid:
+                - [ ] requared?: true/false
+                - [ ] description?: Some value
+                - [ ] default: 1 / "one" / [1, 2, 3] / ["one", "two", "three"] / {"some1": 1, "some2": "value1", "some3": {"key", "some value"}}
+                - [ ] type?: 
+                    - [ ] string / number / integer / boolean / array / object
+                    -? number
+                - [ ] constraints? (default not required message): 
+                    - [ ] AssertFalse
+                    - [ ] AssertTrue
+                    - [ ] DecimalMax
+                    - [ ] DecimalMin
+                    - [ ] Digits
+                    - [ ] Email
+                    - [ ] Max:
+                        - [ ] value
+                    - [ ] Min:
+                        - [ ] value
+                    - [ ] Negative
+                    - [ ] NegativeOrZero
+                    - [ ] NotBlank
+                    - [ ] NotEmpty
+                    - [ ] NotNull
+                    - [ ] Null
+                    - [ ] Future
+                    - [ ] FutureOrPresent
+                    - [ ] Past
+                    - [ ] PastOrPresent
+                    - [ ] Pattern:
+                        - [ ] regexp
+                    - [ ] Positive
+                    - [ ] PositiveOrZero
+                    - [ ] Size?:
+                        - [ ] max?: 1
+                        - [ ] min?: 2

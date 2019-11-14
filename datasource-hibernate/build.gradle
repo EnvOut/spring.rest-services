@@ -1,0 +1,34 @@
+plugins {
+    id 'org.springframework.boot' apply false
+    id 'io.spring.dependency-management' apply false
+}
+
+//apply plugin: "io.spring.dependency-management"
+apply plugin: 'org.springframework.boot'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://repo.spring.io/milestone' }
+}
+
+dependencies {
+    implementation project(':contract')
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa
+//    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'
+
+    compile 'javax.validation:validation-api:2.0.0.Final'
+    compile 'org.hibernate.validator:hibernate-validator:6.0.2.Final'
+    compile 'org.hibernate.validator:hibernate-validator-annotation-processor:6.0.2.Final'
+
+//    implementation('org.springframework.boot:spring-boot-starter-web')
+//    compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    runtimeOnly 'com.h2database:h2'
+    runtimeOnly 'org.postgresql:postgresql'
+}
+
+//springBoot {
+//    mainClassName = 'some.com.Del'
+//}
+//mainClassName = 'some.com.Del'
