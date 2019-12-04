@@ -1,6 +1,6 @@
 package com.springframework.web.restservices.domain.contract.parser;
 
-import com.springframework.web.restservices.domain.contract.uri.*;
+import com.springframework.web.restservices.domain.uri.*;
 
 import java.util.LinkedList;
 import java.util.List;

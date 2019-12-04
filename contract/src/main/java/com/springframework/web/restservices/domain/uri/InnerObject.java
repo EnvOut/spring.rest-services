@@ -1,4 +1,4 @@
-package com.springframework.web.restservices.domain.contract.uri;
+package com.springframework.web.restservices.domain.uri;
 
 import com.springframework.web.restservices.domain.contract.parser.InnerObjectType;
 import com.springframework.web.restservices.domain.contract.util.IdentifierUtils;

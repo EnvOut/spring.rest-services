@@ -1,0 +1,34 @@
+edpoints:
+  - /api/users:
+      name: users endpoint
+      method: GET
+      request:
+        max-params-count: 11
+        model: GetUsers
+        headers:
+          allowed:
+            - Origin
+            - X-SOME
+          ignore:
+            - X-SOME2
+      response:
+        headers:
+          add:
+            - X-SOME: someValue
+        model:
+
+models:
+  - GetUsers:
+      - uuid:
+          requared: true
+          description: UUID of the user
+          default: b888547a-08e2-11ea-8d71-362b9e155667
+          type: string
+          constraints:
+            - AssertFalse
+            - NotNull
+            - Null
+
+
+
+

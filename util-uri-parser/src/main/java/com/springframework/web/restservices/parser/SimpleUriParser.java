@@ -1,12 +1,11 @@
 package com.springframework.web.restservices.parser;
 
 import com.springframework.web.restservices.domain.contract.parser.UriParser;
-import com.springframework.web.restservices.domain.contract.uri.*;
+import com.springframework.web.restservices.domain.uri.*;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
-import org.springframework.stereotype.Service;
 
 import java.net.URI;
 import java.util.*;

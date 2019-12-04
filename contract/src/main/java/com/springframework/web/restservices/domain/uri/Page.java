@@ -1,4 +1,4 @@
-package com.springframework.web.restservices.domain.contract.uri;
+package com.springframework.web.restservices.domain.uri;
 
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;

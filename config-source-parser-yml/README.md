@@ -1,39 +1,89 @@
 - [ ] path:
+    - [ ] redirect?: true/false
     - [ ] name?: some name 1
+    - [ ] Method (GET/POST/PUT/PATCH/DELETE)
     - [ ] request:
-        - [ ] parameters:
-            - [ ] uuid:
-                - [ ] requared?: true/false
-                - [ ] description?: Some value
-                - [ ] default: 1 / "one" / [1, 2, 3] / ["one", "two", "three"] / {"some1": 1, "some2": "value1", "some3": {"key", "some value"}}
-                - [ ] type?: 
-                    - [ ] string / number / integer / boolean / array / object
-                    -? number
-                - [ ] constraints? (default not required message): 
-                    - [ ] AssertFalse
-                    - [ ] AssertTrue
-                    - [ ] DecimalMax
-                    - [ ] DecimalMin
-                    - [ ] Digits
-                    - [ ] Email
-                    - [ ] Max:
-                        - [ ] value
-                    - [ ] Min:
-                        - [ ] value
-                    - [ ] Negative
-                    - [ ] NegativeOrZero
-                    - [ ] NotBlank
-                    - [ ] NotEmpty
-                    - [ ] NotNull
-                    - [ ] Null
-                    - [ ] Future
-                    - [ ] FutureOrPresent
-                    - [ ] Past
-                    - [ ] PastOrPresent
-                    - [ ] Pattern:
-                        - [ ] regexp
-                    - [ ] Positive
-                    - [ ] PositiveOrZero
-                    - [ ] Size?:
-                        - [ ] max?: 1
-                        - [ ] min?: 2
+        - [ ] max_params_count?: 11
+        - [ ] interceptor? (@ParamInterceptor): .class
+        - [ ] model?: GetUsers
+        - [ ] headers?:
+            - [ ] allowed?:
+                - Origin
+                - X-SOME
+            - [ ] ignore? (remove headers from the request):
+                - X-SOME2
+    - [ ] response:
+        - [ ] header:
+            - add:
+                - X-SOME: someValue
+        - model: GetUsersResp
+            
+                
+- [ ] models:
+    - [ ] GetUsers:
+        - [ ] uuid:
+            - [X] required?: true/false
+            - [X] description?: Some value
+            - [X] default: 1 / "one" / [1, 2, 3] / ["one", "two", "three"] / {"some1": 1, "some2": "value1", "some3": {"key", "some value"}}
+            - [X] type?: 
+                - [X] string / number / integer / boolean / array / object
+                -? number
+            - [ ] constraints? (default not required message): 
+                - [X] AssertFalse
+                - [ ] AssertTrue
+                - [ ] DecimalMax
+                - [ ] DecimalMin
+                - [ ] Digits
+                - [ ] Email
+                - [ ] Max:
+                    - [ ] value
+                - [ ] Min:
+                    - [ ] value
+                - [ ] Negative
+                - [ ] NegativeOrZero
+                - [ ] NotBlank
+                - [ ] NotEmpty
+                - [X] NotNull
+                - [X] Null
+                - [ ] Future:
+                    - format: MMddYYYY
+                - [ ] FutureOrPresent:
+                    - format: MMddYYYY
+                - [ ] Past:
+                    - format: MMddYYYY
+                - [ ] PastOrPresent:
+                    - format: MMddYYYY
+                - [ ] Pattern:
+                    - [ ] regexp
+                - [ ] Positive
+                - [ ] PositiveOrZero
+                - [ ] Size?:
+                    - [ ] max?: 1
+                    - [ ] min?: 2
+    - [ ] GetUsersResp:
+        - [ ] value:
+            - type: string / number / integer / boolean / array / object \
+            - someArray(array\<Integer>):
+                - type: array
+                - items:
+                    - type: integer   
+            - refArray(array\<Pet>):
+                - type: array
+                - items:
+                    $ref: '#/components/schemas/Pet'
+            - mapArray(**[{"id": 5}, {"id": 8} ]**):
+                - type: array
+                - items:
+                  - type: object
+                  - properties:
+                    - id:
+                      - type: integer 
+            - mixedTypeArray(**["foo", 5, -2, "bar"]**):
+                - type: array
+                - items:
+                  - oneOf:
+                    - type: string
+                    - type: integer
+            - arbitraryArray(**[ "hello", -2, true, [5.7], {"id": 5} ]**):
+                - type: array
+                - items: {}

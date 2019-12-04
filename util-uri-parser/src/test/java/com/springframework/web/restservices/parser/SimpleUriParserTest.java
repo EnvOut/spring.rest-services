@@ -2,7 +2,7 @@ package com.springframework.web.restservices.parser;
 
 
 import com.springframework.web.restservices.domain.contract.parser.UriParser;
-import com.springframework.web.restservices.domain.contract.uri.Language;
+import com.springframework.web.restservices.domain.uri.Language;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

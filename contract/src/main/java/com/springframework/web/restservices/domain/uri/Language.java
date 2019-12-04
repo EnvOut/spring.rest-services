@@ -1,4 +1,4 @@
-package com.springframework.web.restservices.domain.contract.uri;
+package com.springframework.web.restservices.domain.uri;
 
 import java.util.Optional;
 import java.util.stream.Stream;
